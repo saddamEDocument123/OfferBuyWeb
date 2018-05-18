@@ -1,5 +1,6 @@
 
 import { Component , Input } from '@angular/core'
+import * as $ from 'jquery/dist/jquery.min.js';
 @Component({
     selector: 'my-log',
     templateUrl: './home.component.html',
@@ -7,14 +8,12 @@ import { Component , Input } from '@angular/core'
     
   //providers:[LoginService]
 })
-export class HomeComponent{
-
+export class HomeComponent {
+ 
  lat:any;
  lng:any;
 
-//  title: string = 'My first AGM project';
-//  lat: number = 51.678418;
-//  lng: number = 7.809007;
+
 constructor(){
 
   navigator.geolocation.getCurrentPosition((position) => { 
